@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+    </script>
+</head>
+<body>
+	    <div class="container">
+
+        <div class="main">
+
+            <h1 class="title">Zona Verde</h1>
+            <img src="components/zona1.png" width="200" height="100">
+            <h2 class="sub-title">Cadastro</h2>
+
+            <form>
+                <input type="text" name="Placa" id="placa" maxlength="7" minlength="7" placeholder="Placa" autocomplete="off">
+                <select name="categoria" id="categoria">
+                    <option value="Selecione" disabled selected>Categoria</option>
+                    <option value="3.50"> <a>SubCompacto</a> <a>(R$3,50)</a></option>
+                    <option value="4.00">Compacto (R$4,00)</option>
+                    <option value="4.50">Hatch (R$4,50)</option>
+                    <option value="5.00">Sedan (R$5,00)</option>
+                    <option value="6.00">SUV (R$6,00)</option>
+                    <option value="7.00">Pick-Up (R$7,00)</option>
+                </select>
+                <select name="Tempo" id="tempo">
+                    <option value="Selecione" disabled selected>Tempo</option>
+                    <option value="1">Uma Hora</option>
+                    <option value="2">Duas Horas</option>
+                    <option value="3">Três Horas</option>
+                </select>
+                <div class="tempo inactive" id="tempoShow">
+                    <h1 style="font-size: 1.2rem;">Tempo restante:</h1>                
+                    <center><h1 id="timer" style="font-size: 1rem;"></h1></center>
+                </div>
+
+                <input type="button" value="Tabela de Preço" class="active" id="tbPrec">
+                <input type="button" value="Comprar &rarr;" class="active" id="comprar" onclick="Teste()">
+                <input type="reset" value="Realizar uma nova Compra" class="inactive" id="new">
+            </form>
+
+            <div class="modal-erro inactive" id="modal-erro">
+                <div class="modal-text">
+                    <center><h1 id="modal-title">Mensagem de Erro</h1></center>
+                    <center><h1 id="modal-text"></h1></center>
+                    <input type="button" value="Fechar" id="close">
+                </div>
+            </div>
+
+             <div class="modal-compra inactive" id="modal-compra">
+                <div class="modal-text">
+                    <center><h1 id="modal-title-compra">Informações da Compra</h1></center>
+                    <h1 id="placaText" class="modal-text-compra"></h1>
+                    <h1 id="modeloText" class="modal-text-compra"></h1>
+                    <h1 id="horasText" class="modal-text-compra"></h1>
+                    <h1 id="valorText" class="modal-text-compra"> </h1>                    
+                    <div class="btn">
+                        <input type="button" value="Confirmar" id="confirm">
+                        <input type="button" value="Cancelar" id="cancel">
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-tabela inactive" id="modal-tabela">
+                <div class="modal-text">
+                    <center><h1>Tabela de Preços</h1></center>
+                     <table>
+                        <tr>
+                            <td>Categoria</td>
+                            <td>Preço(p/hora)</td>
+                        </tr>
+                        <tr>
+                            <td>SubCompacto</td>
+                            <td>R$3,50</td>
+                        </tr>
+                        <tr>
+                            <td>Compacto</td>
+                            <td>R$4,00</td>
+                        </tr>
+                        <tr>
+                            <td>Hatch</td>
+                            <td>R$4,50</td>
+                        </tr>
+                        <tr>
+                            <td>Sedan</td>
+                            <td>R$5,00</td>
+                        </tr>
+                        <tr>
+                            <td>SUV</td>
+                            <td>R$6,00</td>
+                        </tr>
+                        <tr>
+                            <td>Pick-Up</td>
+                            <td>R$7,00</td>
+                        </tr>
+                    </table>
+                    <input type="button" value="Fechar" id="closeTabela">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="components/motor.js"></script>
+</body>
+</html>

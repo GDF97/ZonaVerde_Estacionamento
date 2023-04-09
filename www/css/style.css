@@ -1,0 +1,222 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-color: white;
+}
+
+.logo{
+    width: 200px;
+    height: 55px;
+    background-image: url(zona.png);
+    background-position: center;
+    background-size: 15rem;
+}
+
+.title{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.sub-title{
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+form{
+    width: 90%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+#tempo,
+#placa,
+#categoria{
+    width: 100%;
+    height: 3rem;
+    text-align: center;
+    font-size: 1rem;
+    outline: none;
+    border: none;
+    background-color: rgb(228, 228, 228);
+}
+
+#placa::placeholder{
+    opacity: 1;
+    color: black;
+}
+
+
+#comprar{
+    text-transform:uppercase;
+    width: 50%;
+    height: 4rem;
+    border: none;
+    font-size: .9rem;
+    background-color: rgb(203, 242, 206);
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+input[type="reset"]{
+    text-transform:uppercase;
+    width: 75%;
+    height: 4rem;
+    border: none;
+    font-size: .9rem;
+    background-color: rgb(242, 203, 203);
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+#tbPrec.inactive,
+.modal-tabela.inactive,
+.tempo.inactive,
+.modal-compra.inactive,
+.modal-erro.inactive,
+#comprar.inactive,
+input[type="reset"].inactive{
+    display: none;
+}
+
+#tbPrec.active,
+.modal-tabela.active
+.tempo.active,
+.modal-compra.active,
+.modal-erro.active,
+#comprar.active,
+input[type="reset"].active{
+    display: block;
+}
+
+
+.modal-erro{
+    outline: 5000px rgba(0, 0, 0, 0.685) solid;
+    position: absolute;
+    width: 80%;
+    height: 30%;
+    background-color: aliceblue;
+    z-index: 99;
+}
+
+
+.modal-tabela{
+    outline: 5000px rgba(0, 0, 0, 0.685) solid;
+    position: absolute;
+    width: 95%;
+    height: 40%;
+    padding: 1rem;
+    background-color: aliceblue;
+}
+
+.modal-compra{
+    outline: 5000px rgba(0, 0, 0, 0.685) solid;
+    position: absolute;
+    width: 80%;
+    height: fit-content;
+    padding: 1rem;
+    background-color: aliceblue;
+}
+
+.modal-text{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#modal-text{
+    width: 100%;
+    font-size: 1.3rem;
+}
+
+.modal-text-compra{
+    width: 90%;
+}
+
+#valorText,
+#modeloText,
+#horasText,
+#placaText{
+    font-size: 1.3rem;
+}
+
+#modal-title{
+    color: red;
+}
+#modal-title-compra{
+    color: green;
+}
+
+.btn{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+input[value = "Cancelar"]{
+    background-color: red;
+    width: 35%;
+    height: 2rem;
+    color: white;
+    cursor: pointer;
+}
+input[value="Confirmar"]{
+    background-color: green;
+    width: 35%;
+    height: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+#closeTabela,
+#close{
+    align-self: center;
+    width: 20%;
+    height: 20%;
+    background-color: red;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+#tbPrec{
+    width: 40%;
+    height: 2rem;
+    background-color: rgb(184, 184, 230);
+    border: none;
+}
+
+table,td,tr{
+    width: 50%;
+    outline: 1px solid black;
+}
